@@ -57,10 +57,10 @@ $(document).ready(function () {
             const y = $(cell).data('y');
 
             const result =
-                checkLine(x, 0, 0, 1) ||//V
-                checkLine(0, y, 1, 0) ||//H
-                checkLine(0, 0, 1, 1) ||//DR
-                checkLine(2, 0, -1, 1);//DL
+                checkLine(x, 0, 0, 1) ||//Vertical
+                checkLine(0, y, 1, 0) ||//Horizontal
+                checkLine(0, 0, 1, 1) ||//Diagonal Right
+                checkLine(2, 0, -1, 1);//Diagonal Left
 
             if (result) {
                 $(winnerDisplay).text(`Player ${result} wins!`);
